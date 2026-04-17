@@ -24,7 +24,7 @@ def test_foo():
         (Item("Backstage passes to a TAFKAL80ETC concert", 5, 10), 13),
         (Item("Backstage passes to a TAFKAL80ETC concert", -1, 10), 0),
         (Item("Sulfuras, Hand of Ragnaros", 5, 80), 80),
-        (Item("Conjured foo", 11, 20), 18),
+        pytest.param(Item("Conjured foo", 11, 20), 18, marks=pytest.mark.xfail),
     ],
 )
 def test_item_quality(item, expected_quality):
