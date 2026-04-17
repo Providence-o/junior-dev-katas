@@ -19,6 +19,7 @@ def main():
     ]
     days = 2
     import sys
+
     if len(sys.argv) > 1:
         days = int(sys.argv[1]) + 1
     for day in range(days):

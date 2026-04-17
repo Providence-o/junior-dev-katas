@@ -10,6 +10,7 @@ def test_foo():
     gilded_rose.update_quality()
     assert "foo" == items[0].name
 
+
 @pytest.mark.parametrize(
     "item,expected_quality",
     [
