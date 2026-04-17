@@ -35,6 +35,7 @@ def test_item_quality(item, expected_quality):
     assert items[0].quality == expected_quality
 
 
+# TODO: Add edge case tests for sell_in
 @pytest.mark.parametrize(
     "item,expected_sell_in",
     [

@@ -18,6 +18,7 @@ class GildedRose(object):
                     if item.sell_in < 6:
                         if item.quality < 50:
                             item.quality = item.quality + 1
+                    # Look at this sell_in as it was run after sell_in was decreased previously
                     if item.sell_in < 0:
                         item.quality = item.quality - item.quality
             elif item.name == "Aged Brie":
