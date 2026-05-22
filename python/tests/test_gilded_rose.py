@@ -70,6 +70,13 @@ def test_backstage_passes_quality_increase(days, expected_quality_increase):
     assert items[0].quality == 20 + expected_quality_increase
 
 
+def test_backstage_passes_on_day_of_the_concert():
+    items = [Item("Backstage passes to a TAFKAL80ETC concert", 0, 10)]
+    gilded_rose = GildedRose(items)
+    gilded_rose.update_quality()
+    assert items[0].quality == 0
+
+
 def test_backstage_passes_after_the_concert():
     items = [Item("Backstage passes to a TAFKAL80ETC concert", -1, 10)]
     gilded_rose = GildedRose(items)
